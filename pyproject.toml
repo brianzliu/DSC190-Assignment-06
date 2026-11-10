@@ -1,0 +1,23 @@
+[project]
+name = "nldate"
+version = "0.1.0"
+description = "Parse English date expressions into datetime.date objects"
+readme = "README.md"
+authors = [
+    { name = "brianzliu", email = "brianliu0317@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.3", "mypy>=1.15", "ruff>=0.11"]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"
