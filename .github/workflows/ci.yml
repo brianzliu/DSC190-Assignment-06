@@ -14,10 +14,8 @@ jobs:
         with:
           version: '0.8.3'
           python-version: '3.13'
-      - run: uv sync
+      - run: uv sync --locked
       - run: uv run pytest
       - run: uv run mypy src/
       - run: uv run ruff check
       - run: uv run ruff format --check
-      - name: Show generated lockfile
-        run: cat uv.lock
